@@ -6,6 +6,27 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <script>
+    // Verifica si viene de una redirección del 404.html
+    (function() {
+      // Comprueba si viene de una redirección
+      var redirectUrl = sessionStorage.getItem('redirectUrl');
+      if (redirectUrl) {
+        // Limpia el almacenamiento
+        sessionStorage.removeItem('redirectUrl');
+        
+        // Obtén la ruta después del base-href
+        var baseHref = '/Portafolio/';
+        var path = redirectUrl.substr(redirectUrl.indexOf(baseHref) + baseHref.length);
+        
+        // Si hay una ruta, navega a ella
+        if (path && path !== '') {
+          history.replaceState(null, null, baseHref + '#/' + path);
+        }
+      }
+    })();
+  </script>
 </head>
 <body>
   <app-root></app-root>
