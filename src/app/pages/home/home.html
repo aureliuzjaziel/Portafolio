@@ -1,0 +1,179 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span>👋 Hola, soy</span>
+        </div>
+        <h1 class="hero-title">Xavier Lagos</h1>
+        <h2 class="hero-subtitle">Desarrollador Full Stack</h2>
+        <p class="hero-description">
+          Creo experiencias digitales increíbles utilizando las últimas tecnologías web. 
+          Especializado en Angular, React, Node.js y desarrollo de aplicaciones modernas.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" routerLink="/mis-proyectos">
+            <span>Ver Proyectos</span>
+            <i>🚀</i>
+          </a>
+          <a class="btn btn-secondary" routerLink="/contacto">
+            <span>Contactarme</span>
+            <i>💬</i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <!-- Profile Photo Section -->
+        <div class="profile-container">
+          <div class="profile-frame">
+            <div class="profile-glow"></div>
+            <div class="profile-border">
+              <div class="profile-inner-border">
+                <!-- Ruta corregida para Angular 18 -->
+                <img src="images/profile.jpg" alt="Xavier Lagos" class="profile-image" 
+                     (load)="onImageLoad()" (error)="onImageError()" />
+                <!-- Placeholder mientras no tengas la imagen -->
+                <div class="profile-placeholder" [class.hidden]="imageLoaded">
+                  <div class="placeholder-icon">👨‍💻</div>
+                  <div class="placeholder-text">Tu Foto Aquí</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Floating Elements around photo -->
+          <div class="floating-tech-icons">
+            <div class="tech-icon tech-1">
+              <span>⚛️</span>
+              <div class="tech-label">React</div>
+            </div>
+            <div class="tech-icon tech-2">
+              <span>🅰️</span>
+              <div class="tech-label">Angular</div>
+            </div>
+            <div class="tech-icon tech-3">
+              <span>📱</span>
+              <div class="tech-label">Mobile</div>
+            </div>
+            <div class="tech-icon tech-4">
+              <span>⚡</span>
+              <div class="tech-label">Node.js</div>
+            </div>
+            <div class="tech-icon tech-5">
+              <span>🎨</span>
+              <div class="tech-label">Design</div>
+            </div>
+            <div class="tech-icon tech-6">
+              <span>💾</span>
+              <div class="tech-label">Database</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Decorative Shapes -->
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+          <div class="shape shape-5"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Status Indicator -->
+    <div class="status-indicator">
+      <div class="status-dot"></div>
+      <span>Disponible para proyectos</span>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Mis Servicios</h2>
+      <p>Lo que puedo hacer por ti</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Desarrollo Web</h3>
+        <p>Creación de sitios web modernos y responsivos utilizando las mejores prácticas de desarrollo.</p>
+        <a class="service-link">Explorar</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Apps Móviles</h3>
+        <p>Desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android.</p>
+        <a class="service-link">Explorar</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Backend API</h3>
+        <p>Desarrollo de APIs robustas y escalables para tus aplicaciones web y móviles.</p>
+        <a class="service-link">Explorar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Preview Section -->
+<section class="projects-preview">
+  <div class="container">
+    <div class="section-header">
+      <h2>Proyectos Destacados</h2>
+      <p>Algunos de mis trabajos recientes</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card large">
+        <div class="project-image">
+          <div class="project-gradient gradient-1"></div>
+        </div>
+        <div class="project-info">
+          <h3>E-Commerce Platform</h3>
+          <p>Angular • Node.js • MongoDB</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-gradient gradient-2"></div>
+        </div>
+        <div class="project-info">
+          <h3>Task Manager</h3>
+          <p>React • Firebase</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-gradient gradient-3"></div>
+        </div>
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>Angular • CSS3</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-gradient gradient-4"></div>
+        </div>
+        <div class="project-info">
+          <h3>Mobile App</h3>
+          <p>React Native</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-gradient gradient-5"></div>
+        </div>
+        <div class="project-info">
+          <h3>Dashboard</h3>
+          <p>Vue.js • D3.js</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

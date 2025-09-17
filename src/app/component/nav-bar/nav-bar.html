@@ -1,0 +1,49 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo/Brand -->
+    <div class="nav-logo" (click)="navigateTo('/home'); scrollToTop()">
+      <div class="logo-circle">
+        <span class="logo-text">XL</span>
+      </div>
+      <span class="brand-name">Xavier Lagos</span>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li class="nav-item">
+        <a class="nav-link" (click)="navigateTo('/home')">
+          <i class="nav-icon">🏠</i>
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navigateTo('/sobre-mi')">
+          <i class="nav-icon">👨‍💻</i>
+          <span>Sobre Mí</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navigateTo('/mis-proyectos')">
+          <i class="nav-icon">💼</i>
+          <span>Proyectos</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link contact-btn" (click)="navigateTo('/contacto')">
+          <i class="nav-icon">📞</i>
+          <span>Contacto</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+
+  <!-- Background Blur Effect -->
+  <div class="nav-background"></div>
+</nav>
